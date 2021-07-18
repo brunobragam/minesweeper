@@ -4,8 +4,23 @@
 # Log file
 *.log
 
-# BlueJ files
+# Project files
 *.ctxt
+.gradle/
+.idea/
+*.iml
+build/
+classes/
+.classpath
+.project
+.settings/
+out/
+target/
+.DS_Store
+bin/
+*.ipr
+*.iws
+.gradle
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -14,10 +29,14 @@
 *.jar
 *.war
 *.nar
+*.iws
+*.iml
 *.ear
 *.zip
+*.ipr
 *.tar.gz
 *.rar
+.idea
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+
+
