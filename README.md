@@ -14,8 +14,10 @@ Based in `java 11` with `spring boot` using `heroku platform cloud` to running a
 
 
 ## Work Plan to delivery minesweeper api
-- [x] Create project with initial configurations.
-
+- [x] Created project with initial configurations.
+- [x] Created classes with architecture mvc, model, service, controller.
+- [x] Created service interface to segregation.
+- [x] Included swagger2 with initial swagger configuration.
 
 ## Requirements to delivery 
 - [ ] Design and implement a documented RESTful API for the game (think of a mobile app for your API)
