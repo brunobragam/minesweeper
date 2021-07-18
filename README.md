@@ -3,7 +3,7 @@ Minesweeper Challenge, this is api tha would used for consume for RESTful API's.
 
 Based in `java 11` with `spring boot` using `heroku platform cloud` to running application.
 
-#Table of Contents 
+# Table of Contents 
 
 - [`Work Plan to delivery api`](#Work-Plan-to-delivery-api)
 - [`Requirements to delivery`](#Requirements-to-delivery)
@@ -13,11 +13,11 @@ Based in `java 11` with `spring boot` using `heroku platform cloud` to running a
 - [`Guides`](#Guides)
 
 
-##Work Plan to delivery minesweeper api
+## Work Plan to delivery minesweeper api
 - [x] Create project with initial configurations.
 
 
-##Requirements to delivery 
+## Requirements to delivery 
 - [ ] Design and implement a documented RESTful API for the game (think of a mobile app for your API)
 - [ ] Implement an API client library for the API designed above. Ideally, in a different language, of your preference, to the one used for the API
 - [ ] When a cell with no adjacent mines is revealed, all adjacent squares will be revealed (and repeat)
@@ -31,15 +31,15 @@ Based in `java 11` with `spring boot` using `heroku platform cloud` to running a
 
 
 
-##Configurations
+## Configurations
 
-####Recommended IDE
+#### Recommended IDE
 - IntelliJ IDEA
 
-####Enabling Lombok plugin:
+#### Enabling Lombok plugin:
 * Install "lombok" plugin & Enable: Settings -> Compiler -> Annotation Processor -> Enable annotation processing
 
-####Google Java Style Guide
+#### Google Java Style Guide
 
 - All team members should use [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) to keep the code formatting style.
 - To format the code you need to install [google-java-format](https://github.com/google/google-java-format), please follow the instructions below.
@@ -48,7 +48,7 @@ Based in `java 11` with `spring boot` using `heroku platform cloud` to running a
 Steps:
 
 
-####The plugin will not be enabled by default.
+#### The plugin will not be enabled by default.
 
 1. To enable it in the current project, go to "Intellij IDEA→Preferences...→ others plugins → google-java-format
    →
