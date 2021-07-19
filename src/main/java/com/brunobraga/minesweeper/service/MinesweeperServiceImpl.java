@@ -1,14 +1,22 @@
 package com.brunobraga.minesweeper.service;
 
-import com.brunobraga.minesweeper.dto.GamePlayDTO;
+import com.brunobraga.minesweeper.domain.GamePlayEntity;
+import com.brunobraga.minesweeper.dto.GamePlayInputDTO;
+import com.brunobraga.minesweeper.dto.GamePlayResponseDTO;
 import org.springframework.stereotype.Service;
 
+import static com.brunobraga.minesweeper.dto.GamePlayResponseDTO.entityToGamePlayResponseDTO;
+
 @Service
-public class MinesweeperServiceImpl implements MinesweeperService{
+public class MinesweeperServiceImpl implements MinesweeperService {
+
+  @Override
+  public GamePlayResponseDTO createGame(GamePlayInputDTO gamePlayInputDTO) {
+    var gamePlayEntity =
+        new GamePlayEntity(
+            gamePlayInputDTO.getBombs(), gamePlayInputDTO.getRows(), gamePlayInputDTO.getColumns());
 
 
-    @Override
-    public void createGame(GamePlayDTO gamePlayDTO) {
-        //TODO implement rules
-    }
+    return entityToGamePlayResponseDTO(gamePlayEntity);
+  }
 }

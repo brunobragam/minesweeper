@@ -12,12 +12,4 @@ public class MinesweeperApplication {
 		SpringApplication.run(MinesweeperApplication.class, args);
 
   }
-
-  @RestController
-  class HerokuTest{
-		@GetMapping("/")
-		String helloWorld(){
-			return "INITIAL COMMIT - minessweeper";
-		}
-  }
 }
