@@ -18,6 +18,12 @@ Based in `java 11` with `spring boot` using `heroku platform cloud` to running a
 - [x] Created classes with architecture mvc, model, service, controller.
 - [x] Created service interface to segregation.
 - [x] Included swagger2 with initial swagger configuration.
+- [x] Created structure for handler response error.
+- [x] Created response contract for endpoints.
+- [x] Configured Spock Framework for tests and documentation.
+- [x] Created customized checked and unchecked exceptions.
+- [x] Created DTO's for inputstream and downstream.
+- [x] refactored gradle and included dependencies.
 
 ## Requirements to delivery 
 - [ ] Design and implement a documented RESTful API for the game (think of a mobile app for your API)
