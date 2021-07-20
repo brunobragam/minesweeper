@@ -25,9 +25,10 @@ Based in `java 11` with `spring boot` using `heroku platform cloud` to running a
 - [x] Created customized checked and unchecked exceptions.
 - [x] Created DTO's for inputstream and downstream.
 - [x] refactored gradle and included dependencies.
-- [x]  Created a logical to make a build with random bomb positions.
-- [x]  Created dto's for gameplay domain. Used for bind information of the business logical.
-- [x]  included unit tests and library for report.
+- [x] Created a logical to make a build with random bomb positions.
+- [x] Created dto's for gameplay domain. Used for bind information of the business logical.
+- [x] Included unit tests and library for report.
+- [x] Deploying into heroku cloud.
 
 ## Requirements to delivery
 
