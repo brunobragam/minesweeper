@@ -2,6 +2,10 @@
 
 Minesweeper Challenge, this is api tha would used for consume for RESTful API's.
 
+`This service can be accessed with link:`
+
+    https://minesweeper-deviget-bruno.herokuapp.com/swagger-ui.html
+
 Based in `java 11` with `spring boot` using `heroku platform cloud` to running application.
 
 # Table of Contents
@@ -33,7 +37,7 @@ Based in `java 11` with `spring boot` using `heroku platform cloud` to running a
     - Created logic with enum strategy to execute the scan in adjacent positions.
     - It's Necessary customize swagger documentation with responses and specific error code.
     - Unit Tests not all finished.
-    
+
 ## Requirements to delivery
 
 - [ ] Design and implement a documented RESTful API for the game (think of a mobile app for your API)
