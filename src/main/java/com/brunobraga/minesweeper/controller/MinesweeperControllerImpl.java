@@ -20,12 +20,8 @@ public class MinesweeperControllerImpl implements MinesweeperController {
   private final MinesweeperService minesweeperService;
 
   @Override
-  public ResponseEntity<?> getGame(String idGame) {
-    return null;
-  }
-
-  @Override
-  public ResponseEntity<GamePlayResponseDTO> createGame(GamePlayInputDTO gamePlayInputDTO) throws Exception {
+  public ResponseEntity<GamePlayResponseDTO> createGame(GamePlayInputDTO gamePlayInputDTO)
+      throws Exception {
     try {
       var response = minesweeperService.createGame(gamePlayInputDTO);
       return ResponseEntity.ok().body(response);
@@ -37,6 +33,5 @@ public class MinesweeperControllerImpl implements MinesweeperController {
           businessException.getMessage(),
           businessException.getHttpStatus());
     }
-
   }
 }

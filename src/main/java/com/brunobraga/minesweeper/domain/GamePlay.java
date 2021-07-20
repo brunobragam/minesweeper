@@ -1,13 +1,14 @@
 package com.brunobraga.minesweeper.domain;
 
 import com.brunobraga.minesweeper.exceptions.BusinessException;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
 import java.util.UUID;
 
 import static java.lang.String.format;
@@ -16,26 +17,28 @@ import static org.springframework.http.HttpStatus.UNPROCESSABLE_ENTITY;
 @Getter
 @Setter
 @NoArgsConstructor
-public class GamePlayEntity  implements Serializable {
+public class GamePlay implements Serializable {
 
   private static final long serialVersionUID = 1L;
 
   private String gameId;
-  private LocalDateTime localDateTime;
-  private int bombs;
-  private int rows;
-  private int columns;
+  private String localDateTime;
+  private int userInputedBombs;
+  private int userInputedRows;
+  private int userInputedColumns;
 
-  public GamePlayEntity(int bombs, int rows, int columns) {
+  private HashMap<FieldPositionKey, FieldPositionDetail> boardGame = new HashMap<>();
 
+  public GamePlay(int bombs, int rows, int columns) {
 
     this.gameId = UUID.randomUUID().toString();
-    this.localDateTime = LocalDateTime.now();
-    this.bombs = bombs;
-    this.rows = rows;
-    this.columns = columns;
+    this.localDateTime = LocalDateTime.now().format(DateTimeFormatter.ISO_DATE);
+    this.userInputedBombs = bombs;
+    this.userInputedRows = rows;
+    this.userInputedColumns = columns;
 
-    validateMinimalGameConfiguration(this.bombs, this.rows, this.columns);
+    validateMinimalGameConfiguration(
+        this.userInputedBombs, this.userInputedRows, this.userInputedColumns);
   }
 
   private void validateMinimalGameConfiguration(int bombs, int rows, int columns) {
@@ -51,7 +54,7 @@ public class GamePlayEntity  implements Serializable {
   }
 
   private void validateNumberOfBombsToBoard(int bombs) {
-    int numberOfBoardPositions = this.columns * this.rows;
+    int numberOfBoardPositions = this.userInputedColumns * this.userInputedRows;
 
     if (bombs > numberOfBoardPositions) {
       throw new BusinessException(

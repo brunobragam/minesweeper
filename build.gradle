@@ -22,20 +22,25 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation "io.springfox:springfox-boot-starter:3.0.0"
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+
+	implementation 'io.springfox:springfox-swagger2:2.9.2'
+	implementation 'io.springfox:springfox-swagger-ui:2.9.2'
 
 	testImplementation "org.springframework.boot:spring-boot-starter-test"
 	testImplementation "org.codehaus.groovy:groovy-all:3.0.3"
 	testImplementation "org.spockframework:spock-spring:2.0-M3-groovy-3.0"
 	testImplementation group: 'org.spockframework', name: 'spock-core', version: '2.0-groovy-3.0'
-
+	testImplementation group: 'com.athaydes', name: 'spock-reports', version: '2.0.1-RC3'
 	testRuntimeOnly "cglib:cglib-nodep:3.3.0"
 	testRuntimeOnly "org.objenesis:objenesis:3.1"
 
-	compileOnly("org.modelmapper:modelmapper:2.3.2")
+	implementation("org.modelmapper:modelmapper:2.3.2")
+
+
 
 }
 
