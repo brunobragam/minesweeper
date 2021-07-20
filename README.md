@@ -29,7 +29,11 @@ Based in `java 11` with `spring boot` using `heroku platform cloud` to running a
 - [x] Created dto's for gameplay domain. Used for bind information of the business logical.
 - [x] Included unit tests and library for report.
 - [x] Deploying into heroku cloud.
-
+- [x] 80% Concluded the createGame api.
+    - Created logic with enum strategy to execute the scan in adjacent positions.
+    - It's Necessary customize swagger documentation with responses and specific error code.
+    - Unit Tests not all finished.
+    
 ## Requirements to delivery
 
 - [ ] Design and implement a documented RESTful API for the game (think of a mobile app for your API)

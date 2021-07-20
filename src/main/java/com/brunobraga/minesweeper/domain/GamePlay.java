@@ -27,7 +27,7 @@ public class GamePlay implements Serializable {
   private int userInputedRows;
   private int userInputedColumns;
 
-  private HashMap<FieldPositionKey, Boolean> boardGame = new HashMap<>();
+  private HashMap<FieldPositionKey, FieldPositionDetail> boardGame = new HashMap<>();
 
   public GamePlay(int bombs, int rows, int columns) {
 
