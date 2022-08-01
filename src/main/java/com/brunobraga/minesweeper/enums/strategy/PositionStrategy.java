@@ -12,7 +12,7 @@ import java.util.function.BiConsumer;
 
 @Getter
 @RequiredArgsConstructor
-public enum PositionStrategy {
+public enum PositionStrategy {//FieldYloc
   LEFT_TOP(PositionEnum.LEFT_TOP, NewGameComponent::verifyLeftTop),
   MIDDLE_TOP(PositionEnum.MIDDLE_TOP, NewGameComponent::verifyMiddleTop),
   RIGHT_TOP(PositionEnum.RIGHT_TOP, NewGameComponent::verifyRightTop),
@@ -32,7 +32,6 @@ public enum PositionStrategy {
 
   static {
     for (PositionStrategy seguroStrategy : PositionStrategy.values()) {
-
       mapSeguroStrategy.put(seguroStrategy.positionEnum, seguroStrategy);
     }
   }
